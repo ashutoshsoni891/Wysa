@@ -1,0 +1,43 @@
+<h1>Profile Page</h1>
+
+<h3>Welcome {{{nickname}}}!</h3>
+
+<input id="userPorted" value="{{{userPorted}}}" style="border: 0;" hidden="false"/>
+<div id="divUserPorted">
+    <h5>Your data has been ported to another account by you. Please use that account for accessing your data.</h5>
+</div>
+
+
+<div id="divNormal">
+    <h5>
+        On this page, you'll be able to port your data from one account to another using TOTP. Here are the steps:
+        <ol>
+            <li>Open your app on your device generate a TOTP.</li>
+            <li>Provide the TOTP here.</li>
+            <li>If the TOTP got expired, you can generate again.</li>
+            <li>Once verified, all your data will be ported to this account. You may no longer be able to use your previous account.</li>
+        </ol>
+    </h5>
+
+    <form action="/verifyCode" method="post">
+        <p>
+            <label>Username:</label><input value="" name="oldUsername"/><br />
+            <input value="{{{uniqueId}}}" name="uniqueId" hidden="false"/><br />
+            <input value="{{{nickname}}}" name="username" hidden="false"/><br />
+            <label>TOTP<sup>*</sup>:</label><input value="" name="totp" type="tel"/><br /><br />
+            <button type="submit">Verify Code</button>
+        </p>
+    </form>
+</div>
+
+<script>
+    $(function(){
+        var userPorted = document.getElementById("userPorted");
+        if(userPorted && userPorted.value){
+            $("#divNormal").hide();
+        }
+        else{
+            $("#divUserPorted").hide();
+        }
+    });
+</script>
