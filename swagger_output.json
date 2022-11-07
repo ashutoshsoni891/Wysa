@@ -1,0 +1,554 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0.0",
+    "title": "REST API",
+    "description": ""
+  },
+  "host": "localhost:3000",
+  "basePath": "/",
+  "schemes": [
+    "http"
+  ],
+  "paths": {
+    "/user/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "new_user",
+            "in": "body",
+            "description": "SignUp",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "nickname": {
+                  "type": "string",
+                  "example": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/user/{uniqueId}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/device/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "deviceInteraction",
+            "in": "body",
+            "description": "deviceInteraction",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "userId": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "deviceInfo": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "primaryDevice": {
+                  "type": "string",
+                  "example": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/device/{uniqueId}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/exercise/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "ExerciseName",
+            "in": "body",
+            "description": "ExerciseName",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/exercise/{uniqueId}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/journal/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "addJournal",
+            "in": "body",
+            "description": "addJournal",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "userId": {
+                  "type": "string",
+                  "example": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/journal/{uniqueId}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/therapist/": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "Therapist",
+            "in": "body",
+            "description": "Therapist",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "example": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/therapist/{uniqueId}": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/code/generation": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "uniqueId",
+            "in": "query",
+            "description": "uniqueId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "nickname",
+            "in": "query",
+            "description": "nickname",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/code/verification": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "nickname",
+            "in": "query",
+            "description": "nickname",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "totp",
+            "in": "query",
+            "description": "totp",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/formSubmit": {
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "Sign Up",
+            "in": "body",
+            "description": "Sign Up",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "type": "string",
+                  "example": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/signin/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "Sign In",
+            "in": "body",
+            "description": "Sign In",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "totp": {
+                  "type": "string",
+                  "example": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/verifyCode/": {
+      "get": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "username",
+            "in": "query",
+            "description": "username",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "uniqueId",
+            "in": "query",
+            "description": "uniqueId",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "oldUsername",
+            "in": "query",
+            "description": "oldUsername",
+            "required": true,
+            "type": "string"
+          },
+          {
+            "name": "totp",
+            "in": "query",
+            "description": "totp",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      },
+      "post": {
+        "description": "",
+        "parameters": [
+          {
+            "name": "VerifyCode",
+            "in": "body",
+            "description": "VerifyCode",
+            "required": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "username": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "uniqueId": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "oldUsername": {
+                  "type": "string",
+                  "example": "string"
+                },
+                "totp": {
+                  "type": "string",
+                  "example": "string"
+                }
+              }
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/profilePage/": {
+      "get": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    },
+    "/profilePage/formSubmit": {
+      "post": {
+        "description": "",
+        "parameters": [],
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
+      }
+    }
+  }
+}

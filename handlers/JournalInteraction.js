@@ -4,6 +4,13 @@ const JournalInteraction = require('../Controllers/JournalInteraction');
 const validators = require('../helpers/validators');
 
 router.post('/', async(req, res) => {
+
+     /* #swagger.parameters['addJournal'] = {
+               in: 'body',
+               description: 'addJournal',
+               required: true,
+               schema: { userId : 'string'}
+        } */
     const body = req.body;
     console.log(body);
     const response = await JournalInteraction.addJournal(body);

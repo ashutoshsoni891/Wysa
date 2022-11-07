@@ -4,6 +4,13 @@ const ExercisesInteraction = require('../Controllers/ExercisesInteraction');
 const validators = require('../helpers/validators');
 
 router.post('/', async(req, res) => {
+
+     /* #swagger.parameters['ExerciseName'] = {
+               in: 'body',
+               description: 'ExerciseName',
+               required: true,
+               schema: { name : 'string'}
+        } */
     const body = req.body;
     console.log(body);
     const response = await ExercisesInteraction.addExercise(body);

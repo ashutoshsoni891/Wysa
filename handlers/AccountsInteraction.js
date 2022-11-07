@@ -4,6 +4,14 @@ const AccountsInteraction = require('../Controllers/AccountsInteraction');
 const validators = require('../helpers/validators');
 
 router.post('/', async(req, res) => {
+
+    /* #swagger.parameters['new_user'] = {
+               in: 'body',
+               description: 'SignUp',
+               required: true,
+               schema: { nickname : 'string' }
+        } */
+
     const body = req.body;
     console.log(body);
     const response = await AccountsInteraction.addUser(body);
@@ -19,6 +27,8 @@ router.post('/', async(req, res) => {
 });
 
 router.get('/', async (req, res)=>{
+
+
     const params = req.query;
     console.log(params);
     const response = await AccountsInteraction.getAllUsers(params);

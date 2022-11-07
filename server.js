@@ -7,6 +7,9 @@ const connectDB = require('./Connection');
 const app = express();
 const Port = process.env.PORT || 3000;
 
+const swaggerUi = require('swagger-ui-express')
+const swaggerFile = require('./swagger_output.json')
+
 // Handler Imports
 const accountsInteraction = require('./handlers/AccountsInteraction');
 const devicesInteraction = require('./handlers/DevicesInteraction');
@@ -45,4 +48,8 @@ app.use('/verifyCode', verifyCode);
 app.use('/profilePage', ProfilePage);
 
 app.listen(Port, ()=>console.log("Server started"));
+
+app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
+
+// require('./endpoints')(app)
 module.exports = app;

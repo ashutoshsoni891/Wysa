@@ -4,6 +4,14 @@ const TherapistsInteraction = require('../Controllers/TherapistsInteraction');
 const validators = require('../helpers/validators');
 
 router.post('/', async(req, res) => {
+
+     /* #swagger.parameters['Therapist'] = {
+               in: 'body',
+               description: 'Therapist',
+               required: true,
+               schema: { name : 'string' }
+        } */
+
     const body = req.body;
     console.log(body);
     const response = await TherapistsInteraction.addTherapist(body);

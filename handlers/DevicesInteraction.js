@@ -4,6 +4,13 @@ const DevicesInteraction = require('../Controllers/DevicesInteraction');
 const validators = require('../helpers/validators');
 
 router.post('/', async(req, res) => {
+
+     /* #swagger.parameters['deviceInteraction'] = {
+               in: 'body',
+               description: 'deviceInteraction',
+               required: true,
+               schema: { userId : 'string' , deviceInfo : "string" , primaryDevice: "string"}
+        } */
     const body = req.body;
     console.log(body);
     const response = await DevicesInteraction.addDevice(body);

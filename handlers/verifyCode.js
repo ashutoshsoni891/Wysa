@@ -5,6 +5,30 @@ const utils = require('../helpers/utils');
 const validators = require('../helpers/validators');
 
 router.get('/', async (req, res)=>{
+
+
+    /* #swagger.parameters['username'] = {
+               in: 'query',
+               description: 'username',
+               required: true,
+               
+        }
+        #swagger.parameters['uniqueId'] = {
+               in: 'query',
+               description: 'uniqueId',
+               required: true,
+        }
+        #swagger.parameters['oldUsername'] = {
+               in: 'query',
+               description: 'oldUsername',
+               required: true,
+        }
+        #swagger.parameters['totp'] = {
+               in: 'query',
+               description: 'totp',
+               required: true,
+        }
+        */
     const params = req.query;
     console.log(params);
     const response = await verifyCode.loadTemplate(params);
@@ -30,6 +54,14 @@ router.get('/', async (req, res)=>{
 });
 
 router.post('/', async (req, res)=>{
+
+    /* #swagger.parameters['VerifyCode'] = {
+               in: 'body',
+               description: 'VerifyCode',
+               required: true,
+               schema: { username : 'string',uniqueId : 'string',oldUsername : 'string',totp : 'string' }
+        } */
+
     const body = req.body;
     console.log(body);
     const response = await verifyCode.formSubmit(body);

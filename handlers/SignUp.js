@@ -48,6 +48,13 @@ router.get('/', async (req, res)=>{
 });
 
 router.post('/formSubmit', async (req, res)=>{
+
+    /* #swagger.parameters['Sign Up'] = {
+               in: 'body',
+               description: 'Sign Up',
+               required: true,
+               schema: { username : 'string' }
+        } */
     const body = req.body;
     console.log(body);
     const response = await SignUp.formSubmit(body);
